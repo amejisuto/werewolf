@@ -1,0 +1,61 @@
+/*スクロール禁止*/
+html{
+    overflow: hidden;
+}
+.background{
+    background-image: url(image_werwolf/Silver.png);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+.clock{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index: 4;
+}
+.sub_title{
+    font-size: 300%;
+    text-align: center;
+}
+.Counttimer{
+    text-align: center;
+}
+.time{
+    font-size: 400%;
+    font-family: "Sawarabi Mincho";
+}
+.space{
+    letter-spacing: 10vw;
+}
+.Minutes,.Seconds{
+    width: 20%;
+    font-size: 1000%;
+    text-align: right;
+    font-family: 'B612 Mono', monospace;
+    border-radius: 10%;
+}
+
+/*ボタン*/
+.peony1,.peony2{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 300%;
+    font-family: "Sawarabi Mincho";
+    color: #ffffff;
+    background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #c58668;
+    transform: translate(0%,50%);
+}
+.peony1:active,.peony2:active{
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
