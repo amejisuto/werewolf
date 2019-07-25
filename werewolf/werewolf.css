@@ -1,0 +1,803 @@
+/*スクロール禁止*/
+html{
+    overflow: hidden;
+}
+
+
+/**ヘッダー部分 ↓**/
+.title{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 10%;
+    color: white;
+    margin: 0% 0%;
+    padding: 1% 0%;
+    background-color: #cd3f3e;
+    z-index: 5;
+}
+h1{
+    margin: -1.5% auto;
+    text-align: center;
+    font-size: 5vw;
+}
+
+/*タイマーアイコン*/
+.CountTimer{
+    position: absolute;
+    width: calc(14vmin - 60px);
+    height:  calc(14vmin - 60px);
+    border-radius: 50%;
+    border: 1px solid #1c2938;
+    background-image: url(image_werwolf/time.png);
+    background-color: #f4f6f6;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    bottom: 10%;
+    right: 10%;
+    z-index: 10;
+}
+
+/*説明アイコン*/
+.explain{
+    position: absolute;
+    width: calc(15vmin - 60px);
+    height:  calc(15vmin - 60px);
+    border-radius: 50%;
+    background-image: url(image_werwolf/Question.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    bottom: 10%;
+    right: 5%;
+    z-index: 10;
+}
+
+/*占い師アイコン1*/
+  #nav-drawer {
+    position: absolute;
+    left: 5%;
+    bottom: 0
+  }
+  .nav-unshown {
+    display:none;
+  }
+  #nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 10%;
+    vertical-align: middle;
+  }
+  #nav-open span, #nav-open span:before, #nav-open span:after {
+    cursor: pointer;
+    font-size: 3vw;
+    border-radius: 20%;
+    border: solid 2px black;
+    background-color: #f4f6f6;
+    color: black;
+  }
+  #nav-close {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 1%;
+    left: 1%;
+    width: calc(14vmin - 60px);
+    height:  calc(14vmin - 60px);
+    border-radius: 30%;
+    background: white;
+    opacity: 0;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+  }
+  #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    background: #000;
+    color: white;
+    font-size: 40vw;
+    text-align: center;
+    transition: .3s ease-in-out;
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+  }
+  #nav-input:checked ~ #nav-close {
+    display: block;
+    opacity: .5;
+  }
+  #nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);/*中身を表示（右へスライド）*/
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+  }
+  
+/*占い師アイコン2*/
+  #nav-drawer2 {
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+  }
+  #nav-open2 {
+    display: inline-block;
+    width: 30px;
+    height: 10%;
+    vertical-align: middle;
+  }
+  #nav-open2 span, #nav-open2 span:before, #nav-open2 span:after {
+    cursor: pointer;
+    font-size: 3vw;
+    border-radius: 20%;
+    border: solid 2px black;
+    background-color: #1c2938;
+  }
+  #nav-open2 span:before {
+    bottom: -8px;
+  }
+  #nav-open2 span:after {
+    bottom: -16px;
+  }
+  #nav-close2 {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 1%;
+    left: 1%;
+    width: calc(14vmin - 60px);
+    height:  calc(14vmin - 60px);
+    border-radius: 30%;
+    background-color:black; 
+    opacity: 0;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+  }
+  #nav-content2 {
+    overflow: auto;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 900;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    background: #f4f6f6;
+    color: black;
+    font-size: 40vw;
+    text-align: center;
+    transition: .3s ease-in-out;
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+  }
+  #nav-input2:checked ~ #nav-close2 {
+    display: block;
+    opacity: .5;
+  }
+  #nav-input2:checked ~ #nav-content2 {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+  }
+
+/*占い師アイコン3*/
+  #nav-drawer3 {
+    position: absolute;
+    bottom: 0%;
+    left: 15%;
+  }
+  #nav-open3 {
+    display: inline-block;
+    width: 30px;
+    height: 10%;
+    vertical-align: middle;
+  }
+  #nav-open3 span, #nav-open3 span:before, #nav-open3 span:after {
+    cursor: pointer;
+    font-size: 3vw;
+    border-radius: 20%;
+    border: solid 2px #3c0078;
+    background-color: #9635ff;
+  }
+  #nav-open3 span:before {
+    bottom: -8px;
+  }
+  #nav-open3 span:after {
+    bottom: -16px;
+  }
+  #nav-close3 {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 1%;
+    left: 1%;
+    width: calc(14vmin - 60px);
+    height:  calc(14vmin - 60px);
+    border-radius: 30%;
+    background-color:white; 
+    opacity: 0;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+  }
+  #nav-content3 {
+    overflow: auto;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 900;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    mix-blend-mode: normal;
+    background: #5a00b4;
+    color: white;
+    font-size: 40vw;
+    text-align: center;
+    transition: .3s ease-in-out;
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+  }
+  #nav-input3:checked ~ #nav-close3 {
+    display: block;
+    opacity: .5;
+  }
+  #nav-input3:checked ~ #nav-content3 {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+  }
+
+/*アニメーション_右*/
+@keyframes Arrow1right{
+    100%{
+        left: 120%;
+        transform: rotate3d(1,0,0,360deg);
+    }
+    0%{
+        left: -10%;
+        transform: rotate3d(0,0,0,0deg);
+    }
+}
+@keyframes Arrow2right{
+    100%{
+        left: 120%;
+        transform: rotate3d(1,0,0,180deg);
+    }
+    0%{
+        left: -10%;
+        transform: rotate3d(0,0,0,0deg);
+    }
+}
+@keyframes Arrow3right{
+    100%{
+        left: 120%;
+        transform: rotate3d(1,0,0,180deg);
+    }
+    0%{
+        left: -10%;
+        transform: rotate3d(0,0,0,0deg);
+    }
+}
+@keyframes Arrow4right{
+    100%{
+        left: 120%;
+        transform: rotate3d(1,0,0,180deg);
+    }
+    0%{
+        left: -10%;
+        transform: rotate3d(0,0,0,0deg);
+    }
+}
+@keyframes Arrow5right{
+    100%{
+        left: 120%;
+        transform: rotate3d(1,0,0,180deg);
+    }
+    0%{
+        
+        left: -10%;
+        transform: rotate3d(0,0,0,0deg);
+    }
+}
+.Arrow1right{
+    position: absolute;
+    top: 2%;
+    left: 10%;
+    width: 10%;
+    height: 1%;
+    border-radius: 5px;
+    background-color: #ff9c91;
+    mix-blend-mode: overlay;
+    z-index: 6;
+
+    animation-name: Arrow1right;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.Arrow2right{
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    width: 10%;
+    height: 1%;
+    background-color: #ff9c91;
+    mix-blend-mode: overlay;
+    z-index: 6;
+
+    animation-name: Arrow2right;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.Arrow3right{
+    position: absolute;
+    top: 6%;
+    left: 10%;
+    width: 10%;
+    height: 1%;
+    background-color: #ff9c91;
+    mix-blend-mode: overlay;
+    z-index: 6;
+
+    animation-name: Arrow3right;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.Arrow4right{
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    width: 10%;
+    height: 1%;
+    background-color: #ff9c91;
+    mix-blend-mode: overlay;
+    z-index: 6;
+
+    animation-name: Arrow4right;
+    animation-duration: 9s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.Arrow5right{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 10%;
+    height: 1%;
+    background-color: #ff9c91;
+    mix-blend-mode: overlay;
+    z-index: 6;
+
+    animation-name: Arrow5right;
+    animation-duration: 15s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+/*アニメーション_左*/
+@keyframes Arrow1left{
+    100%{
+        left: -10%;
+        transform: rotate3d(1,0,0,180deg);
+    }
+    0%{
+        left: 120%;
+        transform: rotate3d(0,0,0,0deg);
+    }
+}
+@keyframes Arrow2left{
+    100%{
+        left: -10%;
+        transform: rotate3d(1,0,0,360deg);
+    }
+    0%{
+        left: 120%;
+        transform: rotate3d(0,0,0,0deg);
+    }
+}
+@keyframes Arrow3left{
+    100%{
+        left: -10%;
+        transform: rotate3d(1,0,0,360deg);
+    }
+    0%{
+        left: 120%;
+        transform: rotate3d(0,0,0,0deg);
+    }
+}
+@keyframes Arrow4left{
+    100%{
+        left: -10%;
+        transform: rotate3d(1,0,0,360deg);
+    }
+    0%{
+        left: 120%;
+        transform: rotate3d(0,0,0,0deg);
+    }
+}
+@keyframes Arrow5left{
+    100%{
+        left: -10%;
+        transform: rotate3d(1,0,0,360deg);
+    }
+    0%{
+        left: 120%;
+        transform: rotate3d(0,0,0,0deg);
+    }
+}
+.Arrow1left{
+    position: absolute;
+    top: 3%;
+    left: 80%;
+    width: 10%;
+    height: 1%;
+    background-color: #ff9c91;
+    mix-blend-mode: overlay;
+    z-index: 6;
+
+    animation-name: Arrow1left;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.Arrow2left{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    width: 10%;
+    height: 1%;
+    background-color: #ff9c91;
+    mix-blend-mode: overlay;
+    z-index: 6;
+
+    animation-name: Arrow2left;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.Arrow3left{
+    position: absolute;
+    top: 7%;
+    left: 80%;
+    width: 10%;
+    height: 1%;
+    background-color: #ff9c91;
+    mix-blend-mode: overlay;
+    z-index: 6;
+
+    animation-name: Arrow3left;
+    animation-duration: 15s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.Arrow4left{
+    position: absolute;
+    top: 9%;
+    left: 80%;
+    width: 10%;
+    height: 1%;
+    background-color: #ff9c91;
+    mix-blend-mode: overlay;
+    z-index: 6;
+
+    animation-name: Arrow4left;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+.Arrow5left{
+    position: absolute;
+    top: 11%;
+    left: 80%;
+    width: 10%;
+    height: 1%;
+    background-color: #ff9c91;
+    mix-blend-mode: overlay;
+    z-index: 6;
+
+    animation-name: Arrow5left;
+    animation-duration: 9s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+/**ヘッダー部分 ↑**/
+
+
+/**メイン1↓**/
+.main1{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 50%;
+    height: 85%;
+    margin: 0% 0%;
+    padding: 1% 0%;
+    background-color: #f4f6f6;
+    z-index: 4;
+}
+.textareabox{
+    position: absolute;
+    bottom: 15%;
+    margin: 1%;
+    max-width: 90%;
+    max-height: 50%;
+    font-size: 1.3vw;
+    resize: none;
+    border-radius: 5%;
+}
+h2{
+    margin: 3%;
+}
+.font-number{
+    padding: 2px;
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #00F,
+    -1px 1px 1px #00F,
+    1px -1px 1px #00F,
+    -1px -1px 1px #00F;
+}
+input{
+    font-size: 2vh;
+    border-radius: 6px;
+    border-top: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-right: 2px solid #aaa;
+    border-bottom: 2px solid #aaa;
+    background-color: #ddd;
+    text-align: center;
+    margin: 1% 1%;
+}
+select{
+    font-size: 1.5vw;
+    margin: 1%;
+    border:solid 2px rgb(169, 169, 169);
+    background-color: rgb(223, 223, 223);
+}
+select:hover{
+    border-color: rgb(79, 79, 79);
+}
+.decoration-left-bottom{
+    position: absolute;
+    width: calc(15vmin - 60px);
+    height:  calc(15vmin - 60px);
+    background-image: url(image_werwolf/decoration-left.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+}
+.decoration-right-bottom{
+    position: absolute;
+    width: calc(15vmin - 60px);
+    height:  calc(15vmin - 60px);
+    background-image: url(image_werwolf/decoration-right.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    right: 0;
+}
+/**メイン１↑**/
+
+
+/**メイン2↓**/
+.main2{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 50%;
+    height: 85%;
+    margin: 0% 0%;
+    padding: 1% 0%;
+    background-color: #1c2938;
+    z-index: 4;
+}
+.Space{
+    position: absolute;
+    top: 0%;
+    height: 30%;
+    width: 18%;
+    background-color: #ff9c91;
+}
+.desk{
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    width: 40%;
+    height: 70%;
+    background-image: url(image_werwolf/desk.png);
+    background-size: contain;
+    border: solid 2px rgb(69, 47, 18);
+    font-size: 20vw;
+    text-align: center;
+}
+.drag-and-drop{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: calc(15vmin - 60px);
+    height:  calc(15vmin - 60px);
+    border-radius: 50%;
+    background-color: #0000ff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+.shield{
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    width: calc(15vmin - 60px);
+    height:  calc(16vmin - 60px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(image_werwolf/shield.png);
+}
+/**メイン2↑**/
+
+
+/**フッター↓**/
+.ElectricBulletinBoard{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    background-color: #000;
+    width: 100%;
+    height: 6%;
+    z-index: 10;
+}
+.Sentence1{
+    color: white;
+    font-size: xx-large;
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;
+
+    animation-name: sentence1;
+    animation-duration: 60s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.Sentence2{
+    color: white;
+    font-size: xx-large;
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;
+
+    animation-name: sentence2;
+    animation-duration: 60s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.Sentence3{
+    color: white;
+    font-size: xx-large;
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;
+
+    animation-name: sentence3;
+    animation-duration: 60s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.Sentence4{
+    color: white;
+    font-size: xx-large;
+    position: absolute;
+    bottom: 0%;
+    opacity: 0;
+
+    animation-name: sentence4;
+    animation-duration: 60s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes sentence1{
+    100%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    24.99%{
+        opacity: 1;
+    }
+    0%{
+        opacity: 1;
+    }
+}
+@keyframes sentence2{
+    100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    49.99%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    24.99%{
+        opacity: 0;
+    }
+    0%{
+        opacity: 0;
+    }
+}
+@keyframes sentence3{
+    100%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0;
+    }
+    74.99%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    49.99%{
+        opacity: 0;
+    }
+    0%{
+        opacity: 0;
+    }
+}
+@keyframes sentence4{
+    100%{
+        opacity: 0;
+    }
+    99.99%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    74.99%{
+        opacity: 0;
+    }
+    0%{
+        opacity: 0;
+    }
+}
+/**フッター↑**/

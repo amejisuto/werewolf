@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="image_werwolf/time.png" type="image/png">
+    <link rel="stylesheet" href="timer.css">
+    <link href="https://fonts.googleapis.com/css?family=B612+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <title>werewolf_タイマー</title>
+</head>
+<body>
+    <main>
+            <section>
+                <div class="background">
+                    <!--サブタイトル-->
+                    <div class="sub_title">
+                        <h2>カウントタイマー</h2>
+                    </div>
+                    <!--カウントタイマー-->
+                    <div class="Counttimer">
+                        <form name="timer">
+                                <input class="Minutes" type="tel" value="0" maxlength="2"><span class="time">分</span>
+                                <input class="Seconds" type="tel" value="0" maxlength="2"><span class="time">秒</span><br>
+                            <div class="space">
+                                <input class="peony1" type="button" value="スタート" onclick="cntStart()">
+                                <input class="peony2" type="button" value="ストップ" onclick="cntStop()">
+                            </div>
+                        </form>
+                    </div>
+                </div>    
+            </section>
+    </main>
+
+<script src="timer.js"></script>
+</body>
+</html>
